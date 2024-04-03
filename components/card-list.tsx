@@ -9,7 +9,25 @@ import { Card } from './card';
 export const CardList = () => {
     return (
         <div >
-            <Swiper slidesPerView={3.5} spaceBetween={30} style={{ paddingInline: 10 }}>
+            <Swiper breakpoints={{
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                1024: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 30
+                }
+
+            }} spaceBetween={30} style={{ paddingInline: 10 }}>
                 <SwiperSlide >
                     <Card varient="expired" />
                 </SwiperSlide>
